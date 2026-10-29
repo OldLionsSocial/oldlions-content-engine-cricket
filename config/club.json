@@ -108,6 +108,63 @@
         "instagram",
         "gmb"
       ]
+    },
+    "predict": {
+      "daysBefore": 1,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "potw": {
+      "daysAfter": 0,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "guess": {
+      "daysAfter": 0,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    "guess-reveal": {
+      "daysAfter": 0,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "leaderboard": {
+      "daysAfter": 0,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "quiz": {
+      "daysAfter": 0,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "quiz-answer": {
+      "daysAfter": 0,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
     }
   },
   "season": "2026-27",
@@ -124,7 +181,12 @@
     "groundId": "1s2lSbCnOTrbITNLTXbx0bgz0_MwhWT9V",
     "playerIdPattern": "P\\d+",
     "cutoutModel": "birefnet-portrait",
-    "oppositionId": "18i12rnAdQLYP_6GAD4c7jWyEIiL9vzmB"
+    "oppositionId": "18i12rnAdQLYP_6GAD4c7jWyEIiL9vzmB",
+    "rosterSheetId": "1fpANENwyF2KGEpcw1FBVy-EmdGxuw_bPI9PepKfnEHM",
+    "studioRawFolders": [
+      "1H5JDLHcBDiNFSrIZCAqvXLtuy5FlLUTk"
+    ],
+    "_studioRawNote": "Folders of raw shoot photos named after players (currently Inbox / Seniors). Add more folder IDs as new shoots arrive."
   },
   "brandRules": [
     "The badge always appears with its laurels; it may appear without the OLD LIONS text but is never cropped or redrawn."
@@ -135,5 +197,16 @@
     "Randburg CC": "Randburg Cricket Club",
     "Alex CC": "Alex Cricket Club",
     "Old Edwardians": "Old Eds"
+  },
+  "logoMatch": "logo options|badge",
+  "metricoolBrand": "Old Lions Cricket Club",
+  "dailyPlan": {
+    "_note": "Posts the daily job builds by itself (no ops data needed).",
+    "tue": [
+      "quiz"
+    ],
+    "wed": [
+      "quiz.answer"
+    ]
   }
 }

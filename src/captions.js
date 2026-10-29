@@ -16,6 +16,13 @@ const KIND_BRIEF = {
   milestone: 'Celebrate the milestone performance. Make it feel special.',
   'weekend-fixtures': "List this weekend's fixtures for all club teams and invite members to support.",
   'weekend-results': "Summarise the weekend's results across all club teams. Celebrate wins, stay positive about losses.",
+  predict: 'Invite followers to predict the score in the comments. Fun and short.',
+  potw: 'Invite followers to vote for Player of the Week. Mention each candidate briefly.',
+  guess: 'Tease a Guess the Lion silhouette. Invite guesses in the comments. Never reveal the name.',
+  'guess-reveal': "Reveal yesterday's Guess the Lion answer. Light-hearted.",
+  leaderboard: 'Share the season leaderboard. Celebrate the leader, encourage the chasers.',
+  quiz: "Pose the Umpire's Call question. Invite answers in the comments. Never reveal the answer.",
+  'quiz-answer': "Reveal the answer to yesterday's Umpire's Call and explain it simply.",
 };
 
 export function checkCaption(text, allowed) {
@@ -36,7 +43,15 @@ function fallback(kind, facts, club) {
   else if (kind === 'potm') base = `Player of the match: ${get('Player of the match')} against ${get('Opponent')}.`;
   else if (kind === 'milestone') base = `${get('Milestone')}, against ${get('Opponent')}. Take a bow!`;
   else if (kind === 'weekend-fixtures') base = `This weekend: ${facts.filter((f) => f.startsWith('Fixture:')).map((f) => f.slice(9)).join('; ')}. Come and support!`;
-  else base = `Weekend results: ${facts.filter((f) => f.startsWith('Result:')).map((f) => f.slice(8)).join(' ')}`;
+  else if (kind === 'weekend-results') base = `Weekend results: ${facts.filter((f) => f.startsWith('Result:')).map((f) => f.slice(8)).join(' ')}`;
+  else if (kind === 'predict') base = `Predict the score! ${get('Match')}, ${get('Date')}. ${get('Question')} Comment your prediction below.`;
+  else if (kind === 'potw') base = `Player of the Week: who gets your vote? ${facts.filter((f) => f.startsWith('Candidate')).map((f) => f.replace(/^Candidate /, '')).join('. ')}. Vote in our story!`;
+  else if (kind === 'guess') base = `Guess the Lion! ${get('Clue') !== 'none' ? `Clue: ${get('Clue')}. ` : ''}Comment your guess. Answer tomorrow.`;
+  else if (kind === 'guess-reveal') base = `It was ${get('Answer')}! Did you get it?`;
+  else if (kind === 'leaderboard') base = `${get('Leaderboard')}: ${facts.filter((f) => /^\d+\./.test(f)).slice(0, 3).join(', ')}.`;
+  else if (kind === 'quiz') base = `Umpire's Call: ${get('Question')} ${facts.filter((f) => f.startsWith('Option')).map((f) => f.replace('Option ', '')).join(' / ')}. Comment your answer!`;
+  else if (kind === 'quiz-answer') base = `Umpire's Call answer: ${get('Correct answer')}. ${get('Explanation')}`;
+  else base = facts.slice(0, 3).join('. ');
   return Object.fromEntries(PLATFORMS.map((p) => [p, p === 'gmb' ? base : `${base} ${tags}`]));
 }
 

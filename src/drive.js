@@ -100,3 +100,8 @@ export async function readJson(parentId, name) {
 
 export const writeJson = (parentId, name, data) =>
   upsertFile(parentId, name, Buffer.from(JSON.stringify(data, null, 2)), 'application/json');
+
+// Export a Google Docs/Sheets file, e.g. a Sheet as text/csv.
+export async function exportFile(fileId, mimeType) {
+  return Buffer.from(await (await call(`${API}/files/${fileId}/export?mimeType=${encodeURIComponent(mimeType)}`)).arrayBuffer());
+}

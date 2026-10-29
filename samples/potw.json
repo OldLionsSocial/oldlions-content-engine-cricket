@@ -1,0 +1,31 @@
+{
+  "event": "potw.vote",
+  "date": "2026-11-02",
+  "title": "Weekend of 31 October",
+  "candidates": [
+    {
+      "playerId": "P103",
+      "name": "Thabo Mokoena",
+      "team": "1st XI",
+      "line": "112 off 118"
+    },
+    {
+      "playerId": "P108",
+      "name": "Musa Khumalo",
+      "team": "1st XI",
+      "line": "4 for 38"
+    },
+    {
+      "playerId": "P201",
+      "name": "Sam Peters",
+      "team": "3rd XI",
+      "line": "72*"
+    },
+    {
+      "playerId": "P305",
+      "name": "Lerato M.",
+      "team": "Women's XI",
+      "line": "4 for 18"
+    }
+  ]
+}

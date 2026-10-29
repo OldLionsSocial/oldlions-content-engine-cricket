@@ -1,0 +1,14 @@
+{
+  "event": "quiz",
+  "date": "2026-11-03",
+  "question": "The ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens?",
+  "options": [
+    "Dead ball, no runs",
+    "5 penalty runs to the batting side",
+    "Batter can be caught off the rebound",
+    "Umpire awards a no ball"
+  ],
+  "answer": "B",
+  "explanation": "5 penalty runs are awarded to the batting side, as well as any runs already completed.",
+  "law": "Law 28.3"
+}

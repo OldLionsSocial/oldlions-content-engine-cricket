@@ -1,0 +1,34 @@
+name: Housekeeping
+
+# First of each month: removes packs older than 120 days and refreshes the sponsor report.
+on:
+  schedule:
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-packs
+  cancel-in-progress: false
+
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Sponsor report (before old packs are removed)
+        run: node scripts/sponsor-report.js
+      - name: Remove old packs
+        run: node scripts/cleanup.js
+      - name: Save
+        run: |
+          git config user.name "oldlions-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A docs sponsor-report.csv
+          git commit -m "Housekeeping $(date +%F)" || exit 0
+          git pull --rebase && git push

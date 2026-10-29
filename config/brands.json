@@ -1,0 +1,17 @@
+{
+  "_note": "Brand profiles. An event with \"brand\": \"<key>\" is drawn and captioned for that brand. Anything not set falls back to the club settings in club.json. logoMatch picks the logo from Brand Assets / Logos by file or folder name.",
+  "club": {},
+  "super-sixers": {
+    "name": "Old Lions Super Sixers Tournament",
+    "shortName": "Super Sixers",
+    "logoMatch": "super sixers.*(tournament|logo)|sixers tournament",
+    "hashtags": ["#SuperSixers", "#OldLions"],
+    "handles": { "instagram": "" },
+    "metricoolBrand": ""
+  },
+  "gladiators":  { "name": "Gladiators",  "shortName": "Gladiators",  "logoMatch": "gladiators",  "hashtags": ["#Gladiators", "#SuperSixers"],  "handles": { "instagram": "" }, "metricoolBrand": "" },
+  "centurions":  { "name": "Centurions",  "shortName": "Centurions",  "logoMatch": "centurions",  "hashtags": ["#Centurions", "#SuperSixers"],  "handles": { "instagram": "" }, "metricoolBrand": "" },
+  "titans":      { "name": "Titans",      "shortName": "Titans",      "logoMatch": "titans",      "hashtags": ["#Titans", "#SuperSixers"],      "handles": { "instagram": "" }, "metricoolBrand": "" },
+  "mavericks":   { "name": "Mavericks",   "shortName": "Mavericks",   "logoMatch": "mavericks",   "hashtags": ["#Mavericks", "#SuperSixers"],   "handles": { "instagram": "" }, "metricoolBrand": "" },
+  "spartans":    { "name": "Spartans",    "shortName": "Spartans",    "logoMatch": "spartans",    "hashtags": ["#Spartans", "#SuperSixers"],    "handles": { "instagram": "" }, "metricoolBrand": "" }
+}

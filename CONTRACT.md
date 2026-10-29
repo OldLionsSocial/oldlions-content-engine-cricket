@@ -97,3 +97,43 @@ Send one event per team per match. Re-sending the same event rebuilds and replac
 Photos are not sent in events. The engine picks them from the Google Drive Photo Library using the
 player IDs above, and only uses a player's photos when `photoConsent` is `true` in the event.
 Studio photos must be named `PLAYERID_pose.jpg` with the same IDs the ops system uses.
+
+## Interactive posts
+
+All take `"date"` (the day to post) and optional `"brand"` and `"sponsor"`.
+
+```json
+{ "event": "predict.open", ...fixture fields..., "prize": "a bar voucher", "question": "optional custom question" }
+
+{ "event": "potw.vote", "date": "2026-11-02", "title": "Weekend of 31 October",
+  "candidates": [ { "playerId": "P103", "name": "Thabo Mokoena", "team": "1st XI", "line": "112 off 118", "photoConsent": true } ] }
+
+{ "event": "guess.player", "date": "2026-11-04", "playerId": "P103", "photoConsent": true, "clue": "Captain. Scored a hundred last weekend." }
+{ "event": "guess.reveal", "date": "2026-11-05", "playerId": "P103", "photoConsent": true, "name": "Thabo Mokoena" }
+
+{ "event": "leaderboard", "date": "2026-11-03", "season": "2026-27", "metric": "Runs", "subtitle": "Season leaders",
+  "rows": [ { "name": "Thabo Mokoena", "team": "1st XI", "value": 342 } ] }
+
+{ "event": "quiz", "date": "2026-11-03", "question": "...", "options": ["A", "B", "C", "D"], "answer": "B", "explanation": "...", "law": "Law 28.3" }
+{ "event": "quiz.answer", ...same fields... }
+```
+
+Player of the week: pick candidates across all teams (juniors as first name + initial). Up to four.
+
+## `newsletter.weekly`
+
+```json
+{ "event": "newsletter.weekly", "date": "2026-11-02", "title": "Week of 2 November",
+  "results":  [ ...same as results.weekly... ],
+  "fixtures": [ ...same as fixtures.weekly... ],
+  "milestones": [ { "name": "Thabo Mokoena", "team": "1st XI", "text": "112 off 118 balls v Kensington Ridge CC" } ],
+  "news":   [ { "title": "...", "text": "..." } ],
+  "events": [ { "date": "2026-11-07", "title": "Quiz night", "details": "..." } ],
+  "classifieds": [ { "category": "Gear for sale", "title": "...", "text": "...", "price": "R1,200", "contact": "..." } ] }
+```
+
+Only include **approved** classifieds. Send on Sunday evening so the draft is ready to check on Monday morning.
+
+## Brands and sponsors
+
+Any event can include `"brand": "super-sixers"` (or a franchise key from config/brands.json) and `"sponsor": "Sponsor name"` (must match a file name in Brand Assets / Sponsors).

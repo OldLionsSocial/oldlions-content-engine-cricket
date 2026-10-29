@@ -1,0 +1,42 @@
+name: Daily posts
+
+# Every morning at 06:00 Johannesburg time: builds that day's planned posts (see dailyPlan in config/club.json).
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Pretend it's this day (mon, tue, wed...) for testing; leave blank for today"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-packs
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build today's posts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          PACK_SECRET: ${{ secrets.PACK_SECRET }}
+        run: node src/daily.js ${{ inputs.day }}
+      - name: Publish
+        run: |
+          git config user.name "oldlions-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs
+          git commit -m "Daily posts $(date +%F)" || exit 0
+          git pull --rebase && git push

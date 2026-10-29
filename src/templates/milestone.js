@@ -17,7 +17,7 @@ export function milestoneCard(ev, club, size, a, m, name) {
   const c = club.colours, W = size.width, H = size.height, tall = H > 1500, p = pad(size);
   const word = m.word.toUpperCase();
   const px = fitSize(word, tall ? 300 : 260, W - 2 * p.side, 0.47);
-  const rows = [1, 0.32, 0.16, 0.08].map((o, i) => `<div style="display:flex;opacity:${o};color:${i ? c.chalk : c.gold};">${esc(word)}</div>`).join('');
+  const rows = [1, 0.3, 0.16, 0.08].map((o, i) => `<div style="display:flex;opacity:${o};color:${c._name === 'yellow' || !i ? c.gold : c.chalk};">${esc(word)}</div>`).join('');
   const big = m.bat ? `${m.bat.runs}${m.bat.notOut ? '*' : ''}` : `${m.bowl.wickets}-${m.bowl.runs}`;
   const small = m.bat ? `(${m.bat.balls})` : `(${m.bowl.overs})`;
   const infoH = tall ? 360 : 330;

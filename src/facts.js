@@ -120,3 +120,31 @@ export function suggestedTime(ev, club, kind) {
   if (when < soonest) when = soonest; // posting late? go out in 20 minutes instead
   return when;
 }
+
+// Facts for interactive posts (the only details the caption writer may use).
+export function interactiveFacts(kind, ev, club) {
+  const f = [`Club: ${club.name}`];
+  if (kind === 'predict') {
+    f.push(`Match: ${club.shortName} ${ev.team?.name || ''} v ${ev.opponent?.name || 'TBC'}`, `Date: ${matchDate(ev.date, club.timezone)}`, `Start time: ${ev.startTime || 'TBC'}`, `Venue: ${ev.venue?.name || 'TBC'}`);
+    f.push(`Question: ${ev.question || `How many will the ${ev.team?.name || 'team'} score?`}`, `Prize: ${ev.prize || 'bragging rights'}`, 'Task: ask followers to comment their prediction');
+  }
+  if (kind === 'potw') {
+    f.push(`Period: ${ev.title || 'this week'}`);
+    (ev.candidates || []).slice(0, 4).forEach((cd, i) => f.push(`Candidate ${i + 1}: ${cd.name}${cd.team ? ` (${cd.team})` : ''}, ${cd.line || ''}`));
+    f.push('Task: ask followers to vote in the story poll or comment the number of their pick');
+  }
+  if (kind === 'guess') f.push(`Clue: ${ev.clue || 'none'}`, 'Task: ask followers to guess which Old Lions player this is; answer tomorrow. Do not reveal the name.');
+  if (kind === 'guess-reveal') f.push(`Answer: ${ev.name}`, 'Task: reveal the answer to yesterday\'s Guess the Lion and thank everyone who guessed');
+  if (kind === 'leaderboard') {
+    f.push(`Leaderboard: ${ev.metric || ''} ${ev.subtitle || ''}`.trim());
+    (ev.rows || []).forEach((r, i) => f.push(`${i + 1}. ${r.name}${r.team ? ` (${r.team})` : ''}: ${r.value}`));
+  }
+  if (kind === 'quiz' || kind === 'quiz-answer') {
+    f.push(`Question: ${ev.question}`);
+    (ev.options || []).forEach((o, i) => f.push(`Option ${'ABCD'[i]}: ${o}`));
+    if (kind === 'quiz') f.push('Task: ask followers to comment A, B, C or D; answer tomorrow. Do not reveal the answer.');
+    else f.push(`Correct answer: ${ev.answer}`, `Explanation: ${ev.explanation || ''}`, ev.law ? `Reference: ${ev.law}` : '');
+  }
+  if (club.sponsor?.name) f.push(`Sponsor to thank: ${club.sponsor.name}`);
+  return f.filter(Boolean);
+}

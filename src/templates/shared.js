@@ -44,6 +44,14 @@ export function footer(club) {
   const c = club.colours;
   const handle = club.handles?.instagram || '';
   const sponsor = club.sponsor?.name ? `Proudly supported by ${club.sponsor.name}` : '';
+  if (club.sponsor?.logo) {
+    const L = club.sponsor.logo, h = 56, w = Math.round(L.w * h / L.h);
+    return `
+  <div style="display:flex;justify-content:space-between;align-items:center;${BODY};font-size:30px;font-weight:500;color:${c.muted};border-top:2px solid ${c.panel};padding-top:24px;">
+    <div style="display:flex;">${esc(handle)}</div>
+    <div style="display:flex;align-items:center;gap:14px;"><div style="display:flex;">Supported by</div><div style="display:flex;background:#FFFFFF;padding:6px 10px;"><img src="${L.src}" width="${w}" height="${h}" /></div></div>
+  </div>`;
+  }
   return `
   <div style="display:flex;justify-content:space-between;align-items:center;${BODY};font-size:30px;font-weight:500;color:${c.muted};border-top:2px solid ${c.panel};padding-top:28px;">
     <div style="display:flex;">${esc(handle)}</div>
@@ -56,8 +64,8 @@ export function frame(club, size, inner) {
   // Stories keep clear of the app's top and bottom overlays.
   const pad = size.height > 1500 ? '230px 96px' : '72px';
   return `
-  <div style="display:flex;box-sizing:border-box;flex-direction:column;justify-content:space-between;width:${size.width}px;height:${size.height}px;padding:${pad};background:${c.ground};color:${c.chalk};">
-    ${inner}
+  <div style="display:flex;position:relative;overflow:hidden;box-sizing:border-box;flex-direction:column;justify-content:space-between;width:${size.width}px;height:${size.height}px;padding:${pad};background:${c.ground};color:${c.chalk};">
+    ${c._decor ? c._decor.under(size) : ''}${inner}${c._decor ? c._decor.over(size) : ''}
   </div>`;
 }
 
@@ -67,7 +75,8 @@ export function frame(club, size, inner) {
 export const pad = (size) => (size.height > 1500 ? { top: 230, side: 84, bottom: 230 } : { top: 64, side: 64, bottom: 64 });
 
 export function canvas(size, c, layers) {
-  return `<div style="display:flex;position:relative;overflow:hidden;width:${size.width}px;height:${size.height}px;background:${c.ground};color:${c.chalk};">${layers}</div>`;
+  const under = c._decor ? c._decor.under(size) : '', over = c._decor ? c._decor.over(size) : '';
+  return `<div style="display:flex;position:relative;overflow:hidden;width:${size.width}px;height:${size.height}px;background:${c.ground};color:${c.chalk};">${under}${layers}${over}</div>`;
 }
 
 export function layer(size, inner, style = '') {

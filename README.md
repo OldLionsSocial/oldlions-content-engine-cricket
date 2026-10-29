@@ -1,110 +1,94 @@
 # Old Lions content engine
 
-Turns ops-system events into ready-to-post social content: graphics in feed (1080×1350) and story (1080×1920) sizes, captions for every platform, a review page, and a schedule file that Claude can push into Metricool.
+Turns ops-system events into ready-to-post social content and a Monday newsletter: graphics in feed (1080×1350) and story (1080×1920) sizes, captions for every platform, a private review page, and a schedule file Claude can push into Metricool.
 
 ```
 Ops system ──event──▶ GitHub Action ──▶ content pack ──▶ review page ──▶ Claude + Metricool ──▶ socials
+Drive Photo Library ──every 30 min──▶ photo job (cut-outs, logos, index)
+Daily job ──Tue/Wed──▶ Umpire's Call quiz and answer
 ```
 
-## What's in a pack
+## Post types
 
-Each pack lives at `docs/packs/<date>-<team>-<type>/` and is published on GitHub Pages:
+| Event | Posts | Colourway |
+|---|---|---|
+| `fixture.created` / `fixture.updated` | Fixture card (+ creates the match photo folder in Drive) | Navy |
+| `team.selected` | Playing XI (captain cut-out) and Game day poster | Red |
+| `scorecard.imported` | Result (match photo + score band, or scoreboard), Player of the match, a Milestone post for every 50, 100 and 5-for | Red (losses navy); milestones yellow |
+| `fixtures.weekly` / `results.weekly` | Club-wide weekend fixtures / results (carousel past 7 teams) | Navy / red |
+| `predict.open` | Predict the score | Navy |
+| `potw.vote` | Player of the week vote (up to 4) | Red |
+| `guess.player` / `guess.reveal` | Guess the Lion silhouette, then the reveal | Navy / red |
+| `leaderboard` | Season leaderboard (runs, wickets, etc.) | Navy |
+| `quiz` / `quiz.answer` | Umpire's Call question and answer (also built automatically by the daily job) | Yellow / navy |
+| `newsletter.weekly` | Monday newsletter (email-ready HTML + plain text) with results, milestones, fixtures, news, diary and classifieds | Club colours |
 
-- `feed.png` and `story.png`: the graphics
-- `captions.json`: one caption per platform (Facebook, Instagram, TikTok, X, LinkedIn, Google Business Profile)
-- `schedule.json`: every post with its time, media URLs and Metricool settings, plus the facts used and any warnings
-- `index.html`: the review page for the media volunteer
+Turn any post off or change what an event makes with `"outputs"` in `config/club.json`. Change colourways with `"themes"`.
 
-## How captions stay accurate
+Full event formats: **CONTRACT.md**.
 
-Claude only writes the words. Scores and figures come from the ops system and are passed in as a fact sheet. Every number in every caption is checked against that sheet; if Claude adds or changes one, it gets one retry, then that caption is swapped for a plain template and flagged on the review page. Without an API key the engine still works, using template captions.
+## Design
 
-## One-time setup
+Every design shares one look: club red, navy and yellow; a soft spotlight and print texture; the lion (separated from the badge, as approved) as a faint watermark; three sweeping stripes taken from the shirt piping; and fine grain. The badge is always shown whole, with its laurels. Each post type has its own colourway so the feed alternates. Decor lives in `src/theme.js`; templates in `src/templates/`.
 
-1. **Create the repo.** Push this folder to a new GitHub repository named `oldlions-content-engine`. GitHub Pages on a free account needs a public repo; the graphics have to be public anyway so Metricool can fetch them. Never commit keys or tokens.
-2. **Turn on Pages.** Settings → Pages → Deploy from a branch → `main`, folder `/docs`.
-3. **Add your Claude API key.** Get one at console.anthropic.com, then Settings → Secrets and variables → Actions → New secret named `ANTHROPIC_API_KEY`.
-4. **Edit `config/club.json`.** Set `publicBaseUrl` to your Pages address, swap in the club colours, hashtags and sponsor, and check the posting times under `schedule`.
-5. **Edit `config/style-guide.md`** so captions sound like the club.
-6. **Give the ops developer `CONTRACT.md`** plus a fine-grained GitHub token (this repo only, Contents: read and write) so the ops system can send events.
+## Brands (club, Super Sixers, franchises)
 
-## Weekly flow
+Add `"brand": "super-sixers"` (or `gladiators`, `centurions`, `titans`, `mavericks`, `spartans`) to any event to draw it for that brand. Brand settings (name, logo, hashtags, handles, Metricool brand) are in `config/brands.json`; anything not set uses the club's. Logos are found by name in Brand Assets / Logos (all sub-folders). A brand never falls back to the club badge.
 
-1. The ops system creates a fixture, selects a team or imports a scorecard and sends an event.
-2. About two minutes later the pack is live at `<publicBaseUrl>/packs/<pack-id>/`.
-3. The media volunteer opens the review page, checks the graphic, captions and any warnings.
-4. In Claude, with Metricool connected, they paste the line shown on the review page:
-   *"Schedule the Old Lions content pack at …/schedule.json in Metricool. Show me each post before you schedule it."*
-5. Claude reads the file, shows each post, and schedules it on approval.
+## Sponsors
+
+Put sponsor logos in **Brand Assets / Sponsors** (file name = sponsor name). Each post gets one sponsor, rotated fairly, or the one named on the event with `"sponsor": "Name"`. It appears in the footer of the fixture, results, weekend lists and newsletter, and in captions. The **Housekeeping** workflow writes `sponsor-report.csv` each month: appearances per sponsor, month, post type and brand.
+
+## Photos (Google Drive)
+
+Photos live in **Cricket Club / Photo Library** on the shared drive. Every 30 minutes the **Ingest photos** workflow:
+
+1. reads studio photos from **Studio/<season>** (named `PLAYERID_pose.jpg`) and from raw shoot folders listed in `photoLibrary.studioRawFolders` (named after the player, e.g. `Allister de Blocq 4.jpg`),
+2. matches raw photos to players using the **Player Roster (photo matching)** sheet,
+3. has Claude label each raw photo's pose and skip blinks, blur and bad crops (Claude describes the photo; it is never asked who is in it),
+4. removes the green screen, fixes green spill, and makes full, waist-up and head-and-shoulders crops,
+5. reads match photos, ground photos, logos, opposition crests and sponsor logos,
+6. strips location data from everything, and writes `photo-index.json` to *Processed (engine only)*.
+
+The run log lists anything it couldn't use (no roster ID yet, unnamed files, skipped shots).
+
+Consent is checked on every build: a photo is used only if every tagged player has `photoConsent: true` in the event. Juniors appear as first name + initial.
+
+## Privacy
+
+Review pages are public web pages, so each pack's address includes a secret-keyed code (set the `PACK_SECRET` secret) that can't be guessed. There is no public list of packs, and pages ask search engines not to index them. Review links appear in each GitHub run's summary.
+
+## Weekly running
+
+- **Ops events** build posts automatically (see CONTRACT.md). Until the ops system sends them, paste an event into **Actions → Build content pack → Run workflow**.
+- **Daily posts** (Tuesday quiz, Wednesday answer) build at 06:00 by themselves. Add questions to `config/quiz-bank.json`.
+- **To schedule:** open the review page, check it, then paste the line it shows into Claude with Metricool connected.
+- **Newsletter:** open its review page, then paste the line it shows into Claude with Gmail connected to make a draft.
+
+## Secrets (GitHub → Settings → Secrets and variables → Actions)
+
+| Secret | What |
+|---|---|
+| `ANTHROPIC_API_KEY` | Captions, newsletter intro, photo sorting |
+| `GOOGLE_SERVICE_ACCOUNT_JSON` | Drive access (Photo Library only) |
+| `PACK_SECRET` | Any long random text; makes review addresses unguessable |
+
+## Get told when something fails
+
+GitHub emails you when a workflow fails. Check it's on: your GitHub profile → **Settings → Notifications → Actions** → tick **Email** and **Only notify for failed workflows**.
 
 ## Testing locally
 
 ```
 npm install
-npm run demo                                   # builds packs from samples/ with placeholder photos
-ANTHROPIC_API_KEY=sk-... npm run demo          # same, with Claude captions
-node src/build-pack.js path/to/event.json      # any single event
+npm run demo                                            # sample packs with placeholder photos
+node src/build-pack.js samples/quiz.json                # any single event
+node src/daily.js tue                                   # pretend it's Tuesday
 ```
 
-You can also run a build by hand from GitHub: Actions → Build content pack → Run workflow, and paste an event.
+## Not built yet (needs decisions or other systems)
 
-## Post types
-
-| Ops event | Posts made |
-|---|---|
-| `fixture.created` | Fixture card |
-| `team.selected` | Playing XI (captain cut-out beside the team list) and a Game day poster (ground photo, giant type, captain in front) |
-| `scorecard.imported` | Result (full-bleed match photo with a score band, or the scoreboard design when there's no photo), Player of the match (cut-out with stacked stats), and a Milestone post for every 50, 100 or 5-for |
-| `fixtures.weekly` / `results.weekly` | Club-wide weekend fixtures or results, one row per team; more than 7 teams becomes a carousel |
-
-The older Team list design (round headshots for all 11) is still available: set `"outputs": { "team.selected": ["team-list", "gameday"] }` in `config/club.json`. The same setting turns any post type off.
-
-## Photos from Google Drive
-
-Photos live in **Cricket Club / Photo Library** on the club's shared drive (see the guide in that folder). Every 30 minutes the **Ingest photos** workflow:
-
-1. picks up new or changed photos in Studio, Match Photos and Brand Assets,
-2. re-encodes them, which strips location data,
-3. cuts out the background on studio shots and makes a head-and-shoulders crop,
-4. saves everything to *Processed (engine only)* with an index, `photo-index.json`.
-
-When a pack is built, the engine chooses photos from that index:
-
-- **Player of the match / milestones:** studio cut-out matching what they did (bowling pose for a 5-for), then celebrate, then half-body.
-- **Playing XI / Game day:** the captain's half-body (arms crossed) cut-out.
-- **Result:** a match photo from that day tagged with the top performer, otherwise their cut-out on a ground photo.
-- **Backgrounds:** ground photos from Brand Assets / Ground & Club.
-- **Logo:** the first PNG in Brand Assets / Logos.
-
-Consent is checked on every build. A photo is only used if **every** player tagged in it has `photoConsent: true` in the event. Match photos with nobody tagged are never used automatically. Within the current season, photos rotate so the same one isn't used every week.
-
-**Tagging match photos:** put player IDs in the file name (`P103_P107_celebrate.jpg`) or in the file's Drive description (*File information → Details → Description*: `P103 bat`). Words like bat, bowl, keep, celebrate in the name or description help pick the right shot.
-
-Creating a fixture also creates its match folder in Drive, named `YYYY-MM-DD Team v Opponent`.
-
-### Drive setup (one-time)
-
-1. In [Google Cloud Console](https://console.cloud.google.com), create a project, enable the **Google Drive API**, then create a **service account** and download a JSON key.
-2. In Drive, share the **Photo Library** folder (only that folder) with the service account's email address as **Content manager**. If sharing is blocked, your Workspace admin needs to allow sharing with that address, or add it as a member of the shared drive.
-3. In GitHub, add the whole JSON key as a secret named `GOOGLE_SERVICE_ACCOUNT_JSON`.
-4. Run **Actions → Ingest photos → Run workflow** once. The log lists anything it couldn't use, such as badly named studio photos or untagged match photos.
-
-The first run downloads the background-removal model (about a minute); after that it's cached.
-
-## Changing the look
-
-Templates are in `src/templates/` (HTML with inline styles, rendered without a browser by satori; every `div` with more than one child needs `display:flex`). Colours come from `club.json`. Fonts are Anton (display) and Barlow Condensed (text), installed from npm.
-
-## Photos and safeguarding
-
-- A player's photo is only used when `photoConsent` is `true`; otherwise a neutral placeholder is drawn and the review page flags it.
-- Players marked `junior` appear as first name and surname initial on graphics and in captions.
-
-## Not built yet
-
-- Monday newsletter and classifieds
-- Career milestones (games played, season aggregates)
-- Ladder and stat-leader graphics
-- Studio photo-day QR matching (name files `PLAYERID_pose.jpg` for now)
-- Sponsor logos on graphics
-- Fully automatic scheduling (needs Metricool's API on the Advanced plan, or keep the Claude step)
+- An approve-and-schedule button on review pages (needs Metricool's paid API plan)
+- Motion versions for Reels and TikTok
+- Monthly analytics report (needs Metricool data)
+- Picking the Predict the score winner (comments have to be read by a person)

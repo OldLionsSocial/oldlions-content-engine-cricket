@@ -19,7 +19,10 @@ function frame(club, size, a, title, subtitle, rows, pageLabel) {
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:${tall ? 18 : 14}px;">${rows}</div>
-    <div style="display:flex;${BODY};font-size:30px;font-weight:500;color:${c.muted};">${esc(club.handles?.instagram || '')}</div>`)}`);
+    <div style="display:flex;justify-content:space-between;align-items:center;${BODY};font-size:30px;font-weight:500;color:${c.muted};">
+      <div style="display:flex;">${esc(club.handles?.instagram || '')}</div>
+      ${club.sponsor?.logo ? `<div style="display:flex;align-items:center;gap:14px;"><div style="display:flex;">Supported by</div><div style="display:flex;background:#FFFFFF;padding:6px 10px;"><img src="${club.sponsor.logo.src}" width="${Math.round(club.sponsor.logo.w * 50 / club.sponsor.logo.h)}" height="50" /></div></div>` : ''}
+    </div>`)}`);
 }
 
 export function weekendFixturesCard(ev, club, size, a, page, pageLabel) {

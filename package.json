@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build-pack": "node src/build-pack.js",
-    "demo": "node scripts/make-demo-assets.js && for f in fixture team-list result weekly-fixtures weekly-results; do USE_DEMO_PHOTOS=1 node src/build-pack.js samples/$f.json; done",
-    "ingest": "node src/ingest.js"
+    "demo": "node scripts/make-demo-assets.js && for f in fixture team-list result weekly-fixtures weekly-results predict potw guess guess-reveal leaderboard quiz newsletter; do USE_DEMO_PHOTOS=1 node src/build-pack.js samples/$f.json; done",
+    "ingest": "node src/ingest.js",
+    "daily": "node src/daily.js"
   },
   "keywords": [],
   "author": "",

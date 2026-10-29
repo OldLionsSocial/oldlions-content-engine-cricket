@@ -1,0 +1,24 @@
+{
+  "event": "leaderboard",
+  "date": "2026-11-03",
+  "season": "2026-27",
+  "metric": "Runs",
+  "subtitle": "Season leaders",
+  "rows": [
+    {
+      "name": "Thabo Mokoena",
+      "team": "1st XI",
+      "value": 342
+    },
+    {
+      "name": "Sipho Ndlovu",
+      "team": "1st XI",
+      "value": 298
+    },
+    {
+      "name": "Sam Peters",
+      "team": "3rd XI",
+      "value": 251
+    }
+  ]
+}

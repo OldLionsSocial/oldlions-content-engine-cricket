@@ -1,0 +1,82 @@
+{
+  "_note": "Umpire's Call questions, used in order by the daily job (one per week). Based on the MCC Laws of Cricket; check against the current Laws before adding new ones. Local playing conditions can differ.",
+  "questions": [
+    {
+      "question": "The ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens?",
+      "options": ["Dead ball, no runs", "5 penalty runs to the batting side", "Batter can be caught off the rebound", "Umpire awards a no ball"],
+      "answer": "B",
+      "explanation": "5 penalty runs are awarded to the batting side, as well as any runs already completed.",
+      "law": "Law 28.3"
+    },
+    {
+      "question": "A batter is caught off a no ball. Out or not out?",
+      "options": ["Out, caught", "Not out", "Out, but only in T20", "Umpire's discretion"],
+      "answer": "B",
+      "explanation": "A batter can't be caught off a no ball. They can still be run out.",
+      "law": "Law 21"
+    },
+    {
+      "question": "The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal?",
+      "options": ["No, it's not allowed", "Only with a warning first", "Yes, it's a run out", "Only in the last over"],
+      "answer": "C",
+      "explanation": "Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball.",
+      "law": "Law 38.3"
+    },
+    {
+      "question": "A delivery bounces twice before reaching the batter's popping crease. What's the call?",
+      "options": ["Fair delivery", "Wide", "No ball", "Dead ball"],
+      "answer": "C",
+      "explanation": "A ball that bounces more than once, or rolls along the ground, before reaching the popping crease is a no ball.",
+      "law": "Law 21.7"
+    },
+    {
+      "question": "Can a batter be stumped off a wide?",
+      "options": ["Yes", "No", "Only off a leg-side wide", "Only if they've played a shot"],
+      "answer": "A",
+      "explanation": "Yes. A batter can be stumped off a wide, and the wide is still added to the score.",
+      "law": "Law 39"
+    },
+    {
+      "question": "After a wicket, how long does the incoming batter have to be ready to face the next ball under the Laws?",
+      "options": ["1 minute", "2 minutes", "3 minutes", "5 minutes"],
+      "answer": "C",
+      "explanation": "Under the Laws, the incoming batter must be ready within 3 minutes or can be given out timed out. Some competitions set a shorter time.",
+      "law": "Law 40"
+    },
+    {
+      "question": "A fielder catches the ball cleanly but their foot is touching the boundary rope. What's the result?",
+      "options": ["Out, caught", "Four runs", "Six runs", "Dead ball"],
+      "answer": "C",
+      "explanation": "The fielder is grounded beyond the boundary, so it counts as a boundary six, not a catch.",
+      "law": "Law 19 and Law 33"
+    },
+    {
+      "question": "The ball hits the batter's pad and then rolls onto the stumps, dislodging a bail. How is the batter out?",
+      "options": ["Bowled", "LBW", "Hit wicket", "Not out"],
+      "answer": "A",
+      "explanation": "If the ball breaks the wicket after touching the batter or their equipment, the batter is out bowled.",
+      "law": "Law 32"
+    },
+    {
+      "question": "The ball pitches outside leg stump and would have hit the stumps. Can the batter be out LBW?",
+      "options": ["Yes", "No", "Only if no shot was played", "Only to a spinner"],
+      "answer": "B",
+      "explanation": "A batter can't be out LBW if the ball pitched outside the line of leg stump.",
+      "law": "Law 36"
+    },
+    {
+      "question": "The bowler's front heel lands on the popping crease line, with no part of the foot behind it. Fair delivery or no ball?",
+      "options": ["Fair, the line counts as in", "No ball", "Fair, if the back foot is fine", "Umpire's discretion"],
+      "answer": "B",
+      "explanation": "Some part of the front foot must land behind the popping crease, which is the back edge of the line. On the line with nothing behind it is a no ball.",
+      "law": "Law 21.5"
+    },
+    {
+      "question": "The ball lodges in the batter's pad. What happens?",
+      "options": ["Fielders can still take a catch", "Dead ball", "Four leg byes", "Batters can keep running"],
+      "answer": "B",
+      "explanation": "When the ball lodges in a batter's clothing or equipment, it becomes dead.",
+      "law": "Law 20"
+    }
+  ]
+}

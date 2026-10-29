@@ -27,7 +27,7 @@ export async function loadIndex(club) {
 // A photo of people is only usable if every tagged person is in this event's player list
 // with photoConsent === true. Untagged match photos are never used automatically.
 function consentOk(photo, ctx) {
-  if (['ground', 'logo', 'opposition'].includes(photo.type)) return true;
+  if (['ground', 'logo', 'opposition', 'sponsor'].includes(photo.type)) return true;
   if (!photo.playerIds?.length) return false;
   return photo.playerIds.every((id) => ctx.players?.[id]?.photoConsent === true);
 }
@@ -89,8 +89,8 @@ export async function dataUri(choice, index) {
   const ref = choice.photo.files[choice.variant];
   let buf = await bytes(ref, index.source);
   // Logos often sit on a large empty canvas: trim it so the badge fills its space.
-  if (['logo', 'opposition'].includes(choice.photo.type)) buf = await sharp(buf).trim().png().toBuffer();
-  const png = ['cutout', 'head', 'waist'].includes(choice.variant) || ['logo', 'opposition'].includes(choice.photo.type) || String(ref).endsWith('.png');
+  if (['logo', 'opposition', 'sponsor'].includes(choice.photo.type)) buf = await sharp(buf).trim().png().toBuffer();
+  const png = ['cutout', 'head', 'waist'].includes(choice.variant) || ['logo', 'opposition', 'sponsor'].includes(choice.photo.type) || String(ref).endsWith('.png');
   const type = png ? 'image/png' : 'image/jpeg';
   const { width, height } = await sharp(buf).metadata();
   return { src: `data:${type};base64,${buf.toString('base64')}`, w: width, h: height };
@@ -115,9 +115,14 @@ export async function groundImage(index, ctx) {
   return dataUri(pick(index, RULES.ground, { ctx }), index);
 }
 
-export async function logoImage(index) {
-  const logo = index.photos.find((p) => p.type === 'logo');
+// The brand's logo, chosen by a name pattern (club badge by default).
+export async function logoImage(index, club = {}) {
+  const re = new RegExp(club.logoMatch || 'logo options|badge', 'i');
+  const logos = index.photos.filter((p) => p.type === 'logo');
+  const logo = logos.find((p) => re.test(p.name || '')) || (club.logoMatch ? null : logos[0]);
   if (logo) return dataUri({ photo: logo, variant: 'full' }, index);
+  // The bundled club badge is only a fallback for club posts, never for other brands.
+  if (club.brand && club.brand !== 'club') return null;
   const local = path.join(ROOT, 'assets/logo.png');
   if (!fs.existsSync(local)) return null;
   const buf = await sharp(fs.readFileSync(local)).trim().png().toBuffer();
@@ -132,4 +137,12 @@ export async function opponentLogo(index, name, club) {
   const target = norm(club.opponentAliases?.[name] || name);
   const hit = index.photos.find((p) => p.type === 'opposition' && norm(p.name) === target);
   return hit ? dataUri({ photo: hit, variant: 'full' }, index) : null;
+}
+
+// Sponsor for a post: the one named on the event, else a fair rotation by post id.
+export async function sponsorFor(index, packKey, wanted) {
+  const all = index.photos.filter((p) => p.type === 'sponsor').sort((a, b) => a.name.localeCompare(b.name));
+  if (!all.length) return null;
+  const pick = (wanted && all.find((p) => p.name.toLowerCase() === String(wanted).toLowerCase())) || all[hash(packKey) % all.length];
+  return { name: pick.name, logo: await dataUri({ photo: pick, variant: 'full' }, index) };
 }

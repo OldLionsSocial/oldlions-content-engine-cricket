@@ -1,12 +1,1 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Old Lions content packs</title>
-<style>:root{--bg:#f6f7f9;--text:#1a2230;--muted:#5b6678}@media (prefers-color-scheme:dark){:root{--bg:#0f1622;--text:#e8edf4;--muted:#9fb0c7}}
-body{margin:0;font:16px/1.6 system-ui,sans-serif;background:var(--bg);color:var(--text)}main{max-width:720px;margin:0 auto;padding:24px}a{color:inherit}small{color:var(--muted)}</style></head>
-<body><main><h1>Old Lions content packs</h1><ul id="list"><li>Loading…</li></ul></main>
-<script>
-fetch('packs/index.json').then(r=>r.json()).then(list=>{
-  const ul=document.getElementById('list');ul.innerHTML='';
-  if(!list.length){ul.innerHTML='<li>No packs yet.</li>';return;}
-  for(const p of list){const li=document.createElement('li');const a=document.createElement('a');a.href='packs/'+p.id+'/';a.textContent=p.id;
-  const s=document.createElement('small');s.textContent='  '+new Date(p.createdAt).toLocaleString('en-ZA');li.append(a,s);ul.append(li);}
-}).catch(()=>{document.getElementById('list').innerHTML='<li>No packs yet.</li>';});
-</script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Old Lions</title></head><body></body></html>

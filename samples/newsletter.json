@@ -1,0 +1,132 @@
+{
+  "event": "newsletter.weekly",
+  "date": "2026-11-02",
+  "title": "Week of 2 November",
+  "results": [
+    {
+      "team": "1st XI",
+      "opponent": "Old Eds",
+      "outcome": "won",
+      "margin": "41 runs",
+      "ourScore": "276/6 (50)",
+      "theirScore": "235 (47.2)"
+    },
+    {
+      "team": "2nd XI",
+      "opponent": "Khosa Sports Club",
+      "outcome": "lost",
+      "margin": "3 wickets",
+      "ourScore": "187 (44.2)",
+      "theirScore": "188/7 (41)"
+    },
+    {
+      "team": "3rd XI",
+      "opponent": "Wanderers",
+      "outcome": "won",
+      "margin": "6 wickets",
+      "ourScore": "151/4 (28.4)",
+      "theirScore": "148 (35)"
+    },
+    {
+      "team": "Women's XI",
+      "opponent": "Randburg Cricket Club",
+      "outcome": "won",
+      "margin": "21 runs",
+      "ourScore": "142/6 (20)",
+      "theirScore": "121/8 (20)"
+    },
+    {
+      "team": "Sixers",
+      "opponent": "Pirates",
+      "outcome": "no result",
+      "margin": "",
+      "ourScore": "",
+      "theirScore": ""
+    },
+    {
+      "team": "U15",
+      "opponent": "Jeppe Quondam",
+      "outcome": "won",
+      "margin": "45 runs",
+      "ourScore": "176/5 (25)",
+      "theirScore": "131 (23.1)"
+    }
+  ],
+  "fixtures": [
+    {
+      "team": "1st XI",
+      "opponent": "Old Eds",
+      "date": "2026-11-07",
+      "startTime": "10:00",
+      "venue": "Dainfern Main Oval",
+      "homeAway": "home"
+    },
+    {
+      "team": "2nd XI",
+      "opponent": "Khosa Sports Club",
+      "date": "2026-11-07",
+      "startTime": "10:00",
+      "venue": "Away ground",
+      "homeAway": "away"
+    },
+    {
+      "team": "3rd XI",
+      "opponent": "Wanderers",
+      "date": "2026-11-07",
+      "startTime": "13:00",
+      "venue": "Dainfern Main Oval",
+      "homeAway": "home"
+    },
+    {
+      "team": "Women's XI",
+      "opponent": "Randburg Cricket Club",
+      "date": "2026-11-07",
+      "startTime": "09:30",
+      "venue": "Away ground",
+      "homeAway": "away"
+    },
+    {
+      "team": "Sixers",
+      "opponent": "Pirates",
+      "date": "2026-11-07",
+      "startTime": "14:00",
+      "venue": "Dainfern Main Oval",
+      "homeAway": "home"
+    }
+  ],
+  "milestones": [
+    {
+      "name": "Thabo Mokoena",
+      "team": "1st XI",
+      "text": "112 off 118 balls v Kensington Ridge CC"
+    }
+  ],
+  "news": [
+    {
+      "title": "Super Sixers tournament dates confirmed",
+      "text": "Franchise announcements coming soon. Watch our socials."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-11-07",
+      "title": "Quiz night at the clubhouse",
+      "details": "Teams of six, 7pm. All welcome."
+    }
+  ],
+  "classifieds": [
+    {
+      "category": "Gear for sale",
+      "title": "Gray-Nicolls bat, short handle",
+      "text": "Used one season, good condition.",
+      "price": "R1,200",
+      "contact": "the club office"
+    },
+    {
+      "category": "Wanted",
+      "title": "Lift to Saturday away games",
+      "text": "U15 player needs lifts from Fourways.",
+      "contact": "via the club office"
+    }
+  ]
+}
