@@ -1,0 +1,132 @@
+{
+  "event": "team.selected",
+  "matchId": "M-2026-0412",
+  "competition": "Premier League",
+  "round": "Round 4",
+  "format": "50 overs",
+  "team": {
+    "id": "T1",
+    "name": "1st XI"
+  },
+  "opponent": {
+    "name": "Kensington Ridge CC"
+  },
+  "homeAway": "home",
+  "date": "2026-10-31",
+  "startTime": "10:00",
+  "venue": {
+    "name": "Old Lions Oval"
+  },
+  "players": [
+    {
+      "id": "P101",
+      "name": "Sipho Ndlovu",
+      "role": "bat",
+      "battingOrder": 1,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P102",
+      "name": "Jared van Wyk",
+      "role": "bat",
+      "battingOrder": 2,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P103",
+      "name": "Thabo Mokoena",
+      "role": "bat",
+      "battingOrder": 3,
+      "captain": true,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P104",
+      "name": "Rory Pillay",
+      "role": "bat",
+      "battingOrder": 4,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P105",
+      "name": "Liam Botha",
+      "role": "allrounder",
+      "battingOrder": 5,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P106",
+      "name": "Kagiso Dlamini",
+      "role": "wk",
+      "battingOrder": 6,
+      "captain": false,
+      "wicketKeeper": true,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P107",
+      "name": "Aiden Naidoo",
+      "role": "allrounder",
+      "battingOrder": 7,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P108",
+      "name": "Musa Khumalo",
+      "role": "bowl",
+      "battingOrder": 8,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P109",
+      "name": "Dewald Steyn",
+      "role": "bowl",
+      "battingOrder": 9,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    },
+    {
+      "id": "P110",
+      "name": "Yusuf Patel",
+      "role": "bowl",
+      "battingOrder": 10,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": false
+    },
+    {
+      "id": "P111",
+      "name": "Craig Jacobs",
+      "role": "bowl",
+      "battingOrder": 11,
+      "captain": false,
+      "wicketKeeper": false,
+      "photoUrl": "",
+      "photoConsent": true
+    }
+  ]
+}

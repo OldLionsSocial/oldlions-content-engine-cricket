@@ -1,0 +1,48 @@
+name: Build content pack
+
+# Triggered by the ops system (repository_dispatch) or by hand from the Actions tab.
+on:
+  repository_dispatch:
+    types: [ops-event]
+  workflow_dispatch:
+    inputs:
+      event_json:
+        description: "Paste an event payload (see CONTRACT.md)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-packs   # one build at a time so commits never collide
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Save event payload
+        env:
+          EVENT: ${{ github.event_name == 'repository_dispatch' && toJson(github.event.client_payload.data) || inputs.event_json }}
+        run: printf '%s' "$EVENT" > event.json
+
+      - name: Build pack
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: node src/build-pack.js event.json
+
+      - name: Publish pack to GitHub Pages
+        run: |
+          git config user.name "oldlions-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs
+          git commit -m "Content pack: $(node -e 'const e=require("./event.json");console.log(e.event+" "+(e.matchId||e.date))')" || exit 0
+          git pull --rebase && git push

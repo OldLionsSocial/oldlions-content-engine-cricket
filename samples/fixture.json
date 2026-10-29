@@ -1,0 +1,13 @@
+{
+  "event": "fixture.created",
+  "matchId": "M-2026-0412",
+  "competition": "Premier League",
+  "round": "Round 4",
+  "format": "50 overs",
+  "team": { "id": "T1", "name": "1st XI" },
+  "opponent": { "name": "Kensington Ridge CC" },
+  "homeAway": "home",
+  "date": "2026-10-31",
+  "startTime": "10:00",
+  "venue": { "name": "Old Lions Oval" }
+}

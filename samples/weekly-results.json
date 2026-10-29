@@ -1,0 +1,13 @@
+{
+  "event": "results.weekly",
+  "date": "2026-11-01",
+  "title": "Weekend of 31 October",
+  "results": [
+    { "team": "1st XI", "opponent": "Kensington Ridge CC", "outcome": "won", "margin": "34 runs", "ourScore": "268/7 (50)", "theirScore": "234 (46.3)" },
+    { "team": "2nd XI", "opponent": "Northcliff Hawks", "outcome": "lost", "margin": "3 wickets", "ourScore": "187 (44.2)", "theirScore": "188/7 (41)" },
+    { "team": "3rd XI", "opponent": "Linden Vale CC", "outcome": "won", "margin": "6 wickets", "ourScore": "151/4 (28.4)", "theirScore": "148 (35)" },
+    { "team": "Women's XI", "opponent": "Parkview Ladies", "outcome": "won", "margin": "21 runs", "ourScore": "142/6 (20)", "theirScore": "121/8 (20)" },
+    { "team": "Sixers", "opponent": "Emmarentia Sixes", "outcome": "no result", "margin": "", "ourScore": "", "theirScore": "" },
+    { "team": "U15", "opponent": "Westdene Juniors", "outcome": "won", "margin": "45 runs", "ourScore": "176/5 (25)", "theirScore": "131 (23.1)" }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "note": "Demo index pointing at placeholder images on disk.",
+  "photos": [
+    {
+      "sourceId": "demo-ground",
+      "type": "ground",
+      "playerIds": [],
+      "pose": "ground",
+      "season": null,
+      "files": {
+        "full": "samples/photos/ground_full.jpg"
+      }
+    },
+    {
+      "sourceId": "demo-P103_halfbody",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P103"
+      ],
+      "pose": "halfbody",
+      "files": {
+        "cutout": "samples/photos/P103_halfbody_cutout.png",
+        "head": "samples/photos/P103_halfbody_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-P103_bat",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P103"
+      ],
+      "pose": "bat",
+      "files": {
+        "cutout": "samples/photos/P103_bat_cutout.png",
+        "head": "samples/photos/P103_bat_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-P103_celebrate",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P103"
+      ],
+      "pose": "celebrate",
+      "files": {
+        "cutout": "samples/photos/P103_celebrate_cutout.png",
+        "head": "samples/photos/P103_celebrate_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-P108_bowl",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P108"
+      ],
+      "pose": "bowl",
+      "files": {
+        "cutout": "samples/photos/P108_bowl_cutout.png",
+        "head": "samples/photos/P108_bowl_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-P108_halfbody",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P108"
+      ],
+      "pose": "halfbody",
+      "files": {
+        "cutout": "samples/photos/P108_halfbody_cutout.png",
+        "head": "samples/photos/P108_halfbody_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-P101_bat",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P101"
+      ],
+      "pose": "bat",
+      "files": {
+        "cutout": "samples/photos/P101_bat_cutout.png",
+        "head": "samples/photos/P101_bat_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-P101_halfbody",
+      "type": "studio",
+      "season": "2026-27",
+      "playerIds": [
+        "P101"
+      ],
+      "pose": "halfbody",
+      "files": {
+        "cutout": "samples/photos/P101_halfbody_cutout.png",
+        "head": "samples/photos/P101_halfbody_head.png"
+      }
+    },
+    {
+      "sourceId": "demo-match-1",
+      "type": "match",
+      "season": "2026-27",
+      "matchDate": "2026-10-31",
+      "matchFolder": "2026-10-31 1st XI v Kensington Ridge CC",
+      "playerIds": [
+        "P103"
+      ],
+      "pose": "bat",
+      "files": {
+        "full": "samples/photos/match_P103_bat_full.jpg"
+      }
+    }
+  ]
+}

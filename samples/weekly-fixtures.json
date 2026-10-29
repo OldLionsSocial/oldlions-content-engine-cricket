@@ -1,0 +1,15 @@
+{
+  "event": "fixtures.weekly",
+  "date": "2026-10-31",
+  "title": "Saturday 31 October and Sunday 1 November",
+  "fixtures": [
+    { "team": "1st XI", "opponent": "Kensington Ridge CC", "date": "2026-10-31", "startTime": "10:00", "venue": "Old Lions Oval", "homeAway": "home", "competition": "Premier League" },
+    { "team": "2nd XI", "opponent": "Northcliff Hawks", "date": "2026-10-31", "startTime": "10:00", "venue": "Hawks Park", "homeAway": "away", "competition": "Reserve League" },
+    { "team": "3rd XI", "opponent": "Linden Vale CC", "date": "2026-10-31", "startTime": "13:00", "venue": "Old Lions Oval B", "homeAway": "home" },
+    { "team": "Women's XI", "opponent": "Parkview Ladies", "date": "2026-11-01", "startTime": "09:30", "venue": "Parkview Oval", "homeAway": "away" },
+    { "team": "Sixers", "opponent": "Emmarentia Sixes", "date": "2026-11-01", "startTime": "14:00", "venue": "Old Lions Oval", "homeAway": "home" },
+    { "team": "U15", "opponent": "Westdene Juniors", "date": "2026-11-01", "startTime": "09:00", "venue": "Westdene Park", "homeAway": "away" },
+    { "team": "U13", "opponent": "Melville Colts", "date": "2026-11-01", "startTime": "09:00", "venue": "Old Lions Oval B", "homeAway": "home" },
+    { "team": "U11", "opponent": "Greenside Cubs", "date": "2026-11-01", "startTime": "08:30", "venue": "Greenside School", "homeAway": "away" }
+  ]
+}

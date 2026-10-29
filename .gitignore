@@ -1,0 +1,7 @@
+node_modules/
+event.json
+.env
+samples/photos-real/
+__pycache__/
+review-assets/
+review/

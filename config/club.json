@@ -1,0 +1,139 @@
+{
+  "name": "Old Lions Cricket Club",
+  "shortName": "Old Lions",
+  "timezone": "Africa/Johannesburg",
+  "_colours_note": "Placeholder palette. Replace with the club's real colours (hex).",
+  "colours": {
+    "_note": "Old Lions brand: red primary, navy secondary, yellow accent.",
+    "ground": "#ED1B24",
+    "panel": "#043673",
+    "gold": "#FFCB05",
+    "chalk": "#FFFFFF",
+    "muted": "#FFD9DB",
+    "loss": "#021B3D",
+    "deep": "#B5121A"
+  },
+  "logoPath": "assets/logo.png",
+  "hashtags": [
+    "#OldLions",
+    "#OldLionsCricket",
+    "#Roar"
+  ],
+  "handles": {
+    "instagram": "@oldlionscricket",
+    "tiktok": "@oldlionscricket"
+  },
+  "sponsor": {
+    "name": "",
+    "logoPath": ""
+  },
+  "claudeModel": "claude-sonnet-5-5",
+  "publicBaseUrl": "https://YOUR-GITHUB-USERNAME.github.io/oldlions-content-engine",
+  "schedule": {
+    "_note": "When each post type goes out. Times are local (Africa/Johannesburg).",
+    "fixture": {
+      "daysBefore": 3,
+      "time": "18:00",
+      "networks": [
+        "facebook",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    "team-list": {
+      "daysBefore": 1,
+      "time": "18:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "playing-xi": {
+      "daysBefore": 1,
+      "time": "18:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "gameday": {
+      "daysBefore": 0,
+      "time": "07:30",
+      "networks": [
+        "facebook",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    "result": {
+      "daysAfter": 0,
+      "time": "20:00",
+      "networks": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "gmb"
+      ]
+    },
+    "potm": {
+      "daysAfter": 0,
+      "time": "20:30",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "milestone": {
+      "daysAfter": 1,
+      "time": "12:00",
+      "networks": [
+        "facebook",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    "weekend-fixtures": {
+      "daysBefore": 2,
+      "time": "17:00",
+      "networks": [
+        "facebook",
+        "instagram"
+      ]
+    },
+    "weekend-results": {
+      "daysAfter": 1,
+      "time": "09:00",
+      "networks": [
+        "facebook",
+        "instagram",
+        "gmb"
+      ]
+    }
+  },
+  "season": "2026-27",
+  "photoLibrary": {
+    "_note": "Google Drive folder IDs (Cricket Club / Photo Library). Match folders are created automatically for new fixtures.",
+    "folderId": "1TKgSlnr-Kw3qC4kfY-5r33pM4A3awt0o",
+    "studioId": "1aMy0m9cDGC3LiXb4pq2ZVqxBy47ccbMk",
+    "matchId": "1MFKJQUQ2z_e9kRFcPl41xlsfmlWLnoUG",
+    "inboxId": "1U4iZjR3DEB68tQblMkxigZWDfi3F8DJW",
+    "processedId": "1Ffr9S1wh3WVdtT-eZuQJb1eWqT-NCyPN",
+    "brandId": "1_0Ilc_Z5bixl-1ALz0wwEo-W4TLLLFvn",
+    "logosId": "1VDVW1dFMWIOhrKcHthiz89UdgjEIVm7p",
+    "sponsorsId": "1HDH74X9HiRiLzWj7kzHPM0n9xfaiOZiX",
+    "groundId": "1s2lSbCnOTrbITNLTXbx0bgz0_MwhWT9V",
+    "playerIdPattern": "P\\d+",
+    "cutoutModel": "birefnet-portrait",
+    "oppositionId": "18i12rnAdQLYP_6GAD4c7jWyEIiL9vzmB"
+  },
+  "brandRules": [
+    "The badge always appears with its laurels; it may appear without the OLD LIONS text but is never cropped or redrawn."
+  ],
+  "opponentAliases": {
+    "Khosa": "Khosa Sports Club",
+    "Khosa Cricket": "Khosa Sports Club",
+    "Randburg CC": "Randburg Cricket Club",
+    "Alex CC": "Alex Cricket Club",
+    "Old Edwardians": "Old Eds"
+  }
+}
