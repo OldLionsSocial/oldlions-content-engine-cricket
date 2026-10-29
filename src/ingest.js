@@ -122,7 +122,7 @@ async function main() {
       const src = await download(item.file.id);
       const files = {};
       if (item.type === 'logo' || item.type === 'opposition') {
-        const png = await sharp(src).resize(800, 800, { fit: 'inside', withoutEnlargement: true }).png().toBuffer();
+        const png = await sharp(src).trim().resize(800, 800, { fit: 'inside', withoutEnlargement: true }).png().toBuffer();
         files.full = await upsertFile(lib.processedId, `${item.file.id}_logo.png`, png, 'image/png');
       } else {
         files.full = await upsertFile(lib.processedId, `${item.file.id}_full.jpg`, await processFull(src), 'image/jpeg');

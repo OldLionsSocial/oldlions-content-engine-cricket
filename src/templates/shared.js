@@ -33,7 +33,7 @@ export function header(club, ev) {
   return `
   <div style="display:flex;justify-content:space-between;align-items:center;${BODY};font-size:34px;font-weight:600;">
     <div style="display:flex;align-items:center;gap:18px;color:${c.gold};">
-      <div style="display:flex;width:14px;height:44px;background:${c.gold};"></div>
+      ${club._logo ? `<img src="${club._logo.src}" width="${Math.round(64 * club._logo.w / club._logo.h)}" height="64" />` : `<div style="display:flex;width:14px;height:44px;background:${c.gold};"></div>`}
       <div style="display:flex;">${esc(left)}</div>
     </div>
     <div style="display:flex;color:${c.muted};">${esc(right)}</div>

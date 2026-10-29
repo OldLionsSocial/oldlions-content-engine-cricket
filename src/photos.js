@@ -87,7 +87,9 @@ async function bytes(ref, source) {
 export async function dataUri(choice, index) {
   if (!choice) return null;
   const ref = choice.photo.files[choice.variant];
-  const buf = await bytes(ref, index.source);
+  let buf = await bytes(ref, index.source);
+  // Logos often sit on a large empty canvas: trim it so the badge fills its space.
+  if (['logo', 'opposition'].includes(choice.photo.type)) buf = await sharp(buf).trim().png().toBuffer();
   const png = ['cutout', 'head', 'waist'].includes(choice.variant) || ['logo', 'opposition'].includes(choice.photo.type) || String(ref).endsWith('.png');
   const type = png ? 'image/png' : 'image/jpeg';
   const { width, height } = await sharp(buf).metadata();
@@ -118,7 +120,7 @@ export async function logoImage(index) {
   if (logo) return dataUri({ photo: logo, variant: 'full' }, index);
   const local = path.join(ROOT, 'assets/logo.png');
   if (!fs.existsSync(local)) return null;
-  const buf = fs.readFileSync(local);
+  const buf = await sharp(fs.readFileSync(local)).trim().png().toBuffer();
   const { width, height } = await sharp(buf).metadata();
   return { src: `data:image/png;base64,${buf.toString('base64')}`, w: width, h: height };
 }
