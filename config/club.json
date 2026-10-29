@@ -28,7 +28,7 @@
     "logoPath": ""
   },
   "claudeModel": "claude-sonnet-5-5",
-  "publicBaseUrl": "https://YOUR-GITHUB-USERNAME.github.io/oldlions-content-engine",
+  "publicBaseUrl": "https://oldlionssocial.github.io/oldlions-content-engine-cricket",
   "schedule": {
     "_note": "When each post type goes out. Times are local (Africa/Johannesburg).",
     "fixture": {
