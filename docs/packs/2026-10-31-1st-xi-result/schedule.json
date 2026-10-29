@@ -1,0 +1,113 @@
+{
+  "id": "2026-10-31-1st-xi-result",
+  "kind": "result",
+  "matchId": "M-2026-0412",
+  "createdAt": "2026-10-29T11:07:41.948Z",
+  "captionSource": "claude",
+  "warnings": [],
+  "facts": [
+    "Team: Old Lions 1st XI",
+    "Opponent: Kensington Ridge CC",
+    "Competition: Premier League, Round 4",
+    "Date: Saturday, 31 October",
+    "Start time: 10:00",
+    "Venue: Old Lions Oval (home fixture)",
+    "Format: 50 overs",
+    "Result: Old Lions won by 34 runs",
+    "Toss: Old Lions won the toss and batted",
+    "Innings: Old Lions 268/7 (50 overs)",
+    "Innings: Kensington Ridge CC 234 all out (46.3 overs)",
+    "Batting: Thabo Mokoena 112 off 118 balls (11 fours, 3 sixes)",
+    "Batting: Sipho Ndlovu 47 off 52 balls (6 fours)",
+    "Batting: Aiden Naidoo 31* off 22 balls (2 fours, 2 sixes)",
+    "Bowling: Musa Khumalo 4 for 38 off 9.3 overs",
+    "Bowling: Liam Botha 2 for 44 off 10 overs",
+    "Player of the match: Thabo Mokoena (112 off 118 balls (11 fours, 3 sixes))"
+  ],
+  "captions": {
+    "facebook": "What a Saturday at Old Lions Oval! 🦁 The 1st XI beat Kensington Ridge CC by 34 runs in Premier League Round 4, posting 268/7 after winning the toss and then bowling the visitors out for 234. Player of the match is Thabo Mokoena, who smashed 112 off 118 balls with 11 fours and 3 sixes, backed up by Sipho Ndlovu's 47, Aiden Naidoo's quickfire 31* off 22 and Musa Khumalo's 4 for 38. Well played to Kensington Ridge for a good contest!",
+    "instagram": "Century in the sun, win on the board. 🦁\n\nThabo Mokoena is our player of the match with 112 off 118 (11 fours, 3 sixes) as the 1st XI beat Kensington Ridge CC by 34 runs. Old Lions 268/7, Kensington Ridge 234 all out. Shout-out to Sipho Ndlovu (47), Aiden Naidoo (31* off 22) and Musa Khumalo (4/38) too.\n\n#OldLions #OldLionsCricket #Roar",
+    "tiktok": "Thabo Mokoena smashes 112 and the Lions win by 34 runs! 🦁\nPlayer of the match, take a bow! 🏏 #OldLions #Roar",
+    "x": "Old Lions 1st XI beat Kensington Ridge CC by 34 runs! Player of the match Thabo Mokoena struck 112 off 118. 🦁 #OldLions #Roar",
+    "linkedin": "Old Lions 1st XI secured a 34-run home win over Kensington Ridge CC in Round 4 of the Premier League at Old Lions Oval. After winning the toss and batting, we posted 268/7 and then bowled the visitors out for 234. Congratulations to Thabo Mokoena, player of the match with 112 off 118 balls, and to Sipho Ndlovu, Aiden Naidoo and Musa Khumalo for key contributions. Thanks to Kensington Ridge CC for a competitive match and to everyone who came out to support the club. #OldLions #OldLionsCricket",
+    "gmb": "Old Lions 1st XI beat Kensington Ridge CC by 34 runs in Premier League Round 4 on Saturday 31 October at Old Lions Oval. Old Lions made 268/7 in 50 overs and Kensington Ridge were dismissed for 234. Thabo Mokoena was player of the match with 112 off 118 balls."
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "What a Saturday at Old Lions Oval! 🦁 The 1st XI beat Kensington Ridge CC by 34 runs in Premier League Round 4, posting 268/7 after winning the toss and then bowling the visitors out for 234. Player of the match is Thabo Mokoena, who smashed 112 off 118 balls with 11 fours and 3 sixes, backed up by Sipho Ndlovu's 47, Aiden Naidoo's quickfire 31* off 22 and Musa Khumalo's 4 for 38. Well played to Kensington Ridge for a good contest!",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-result/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-10-31T20:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Century in the sun, win on the board. 🦁\n\nThabo Mokoena is our player of the match with 112 off 118 (11 fours, 3 sixes) as the 1st XI beat Kensington Ridge CC by 34 runs. Old Lions 268/7, Kensington Ridge 234 all out. Shout-out to Sipho Ndlovu (47), Aiden Naidoo (31* off 22) and Musa Khumalo (4/38) too.\n\n#OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-result/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-10-31T20:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-result/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-10-31T20:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    },
+    {
+      "network": "tiktok",
+      "text": "Thabo Mokoena smashes 112 and the Lions win by 34 runs! 🦁\nPlayer of the match, take a bow! 🏏 #OldLions #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-result/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-10-31T20:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "tiktokData": {
+        "privacyOption": "PUBLIC_TO_EVERYONE"
+      }
+    },
+    {
+      "network": "gmb",
+      "text": "Old Lions 1st XI beat Kensington Ridge CC by 34 runs in Premier League Round 4 on Saturday 31 October at Old Lions Oval. Old Lions made 268/7 in 50 overs and Kensington Ridge were dismissed for 234. Thabo Mokoena was player of the match with 112 off 118 balls.",
+      "media": [],
+      "publicationDate": {
+        "dateTime": "2026-10-31T20:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "gmbData": {
+        "type": "publication"
+      }
+    }
+  ]
+}

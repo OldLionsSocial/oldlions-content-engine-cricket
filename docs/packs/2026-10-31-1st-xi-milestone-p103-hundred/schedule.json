@@ -1,0 +1,94 @@
+{
+  "id": "2026-10-31-1st-xi-milestone-p103-hundred",
+  "kind": "milestone",
+  "matchId": "M-2026-0412",
+  "createdAt": "2026-10-29T11:08:02.269Z",
+  "captionSource": "claude",
+  "warnings": [
+    "Claude attempt 1 failed: Unexpected non-whitespace character after JSON at position 1564",
+    "No usable cut-out of Thabo Mokoena for the milestone graphic."
+  ],
+  "facts": [
+    "Team: Old Lions 1st XI",
+    "Opponent: Kensington Ridge CC",
+    "Competition: Premier League, Round 4",
+    "Date: Saturday, 31 October",
+    "Venue: Old Lions Oval (home fixture)",
+    "Format: 50 overs",
+    "Milestone: Thabo Mokoena scored a hundred: 112 off 118 balls (11 fours, 3 sixes)"
+  ],
+  "captions": {
+    "facebook": "A day to remember at Old Lions Oval! 🏏 Thabo Mokoena struck a magnificent hundred on Saturday 31 October, making 112 off 118 balls with 11 fours and 3 sixes against Kensington Ridge CC in Round 4 of the Premier League. A proper captain's knock in a 50-over home fixture, and the Oval loved every minute of it. Take a bow, Thabo! 🦁",
+    "instagram": "Thabo Mokoena. A hundred. At home. 🦁\n\n112 off 118 balls, 11 fours and 3 sixes against Kensington Ridge CC in Premier League Round 4 at Old Lions Oval. Take a bow, Thabo!\n\n#OldLions #OldLionsCricket #Roar",
+    "tiktok": "Thabo Mokoena brings up a HUNDRED at the Oval! 🏏 112 off 118 balls, 11 fours, 3 sixes. Absolute scenes! #OldLions #Roar",
+    "x": "Century for Thabo Mokoena! 112 off 118 balls (11 fours, 3 sixes) v Kensington Ridge CC at Old Lions Oval. 🦁 #OldLions #Roar",
+    "linkedin": "Congratulations to Thabo Mokoena of the Old Lions 1st XI on a superb century: 112 off 118 balls, including 11 fours and 3 sixes, against Kensington Ridge CC in Round 4 of the Premier League on Saturday 31 October at Old Lions Oval. Milestones like this are a credit to the dedication of our players and the support of our club community. #OldLionsCricket",
+    "gmb": "Congratulations to Thabo Mokoena of the Old Lions 1st XI, who scored a hundred (112 off 118 balls, with 11 fours and 3 sixes) against Kensington Ridge CC in Round 4 of the Premier League on Saturday 31 October at Old Lions Oval. A 50-over home fixture."
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "A day to remember at Old Lions Oval! 🏏 Thabo Mokoena struck a magnificent hundred on Saturday 31 October, making 112 off 118 balls with 11 fours and 3 sixes against Kensington Ridge CC in Round 4 of the Premier League. A proper captain's knock in a 50-over home fixture, and the Oval loved every minute of it. Take a bow, Thabo! 🦁",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-milestone-p103-hundred/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-01T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Thabo Mokoena. A hundred. At home. 🦁\n\n112 off 118 balls, 11 fours and 3 sixes against Kensington Ridge CC in Premier League Round 4 at Old Lions Oval. Take a bow, Thabo!\n\n#OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-milestone-p103-hundred/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-01T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-milestone-p103-hundred/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-01T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    },
+    {
+      "network": "tiktok",
+      "text": "Thabo Mokoena brings up a HUNDRED at the Oval! 🏏 112 off 118 balls, 11 fours, 3 sixes. Absolute scenes! #OldLions #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-10-31-1st-xi-milestone-p103-hundred/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-01T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "tiktokData": {
+        "privacyOption": "PUBLIC_TO_EVERYONE"
+      }
+    }
+  ]
+}
