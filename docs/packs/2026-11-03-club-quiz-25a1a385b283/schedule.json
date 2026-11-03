@@ -1,0 +1,80 @@
+{
+  "id": "2026-11-03-club-quiz-25a1a385b283",
+  "brand": "club",
+  "metricoolBrand": "Old Lions Cricket Club",
+  "sponsor": null,
+  "kind": "quiz",
+  "matchId": null,
+  "createdAt": "2026-11-03T04:39:36.708Z",
+  "captionSource": "claude",
+  "warnings": [],
+  "facts": [
+    "Club: Old Lions Cricket Club",
+    "Question: The ball lodges in the batter's pad. What happens?",
+    "Option A: Fielders can still take a catch",
+    "Option B: Dead ball",
+    "Option C: Four leg byes",
+    "Option D: Batters can keep running",
+    "Task: ask followers to comment A, B, C or D; answer tomorrow. Do not reveal the answer."
+  ],
+  "captions": {
+    "facebook": "Umpire's Call time, Old Lions! 🏏 The ball lodges in the batter's pad. What happens? A) Fielders can still take a catch, B) Dead ball, C) Four leg byes, or D) Batters can keep running. Drop your answer in the comments, and we'll reveal the answer tomorrow. No peeking at the rulebook!",
+    "instagram": "Umpire's Call! 🏏 The ball lodges in the batter's pad. What happens?\n\nA) Fielders can still take a catch\nB) Dead ball\nC) Four leg byes\nD) Batters can keep running\n\nComment A, B, C or D below. Answer tomorrow! 🦁\n\n#OldLions #OldLionsCricket #Roar",
+    "tiktok": "Umpire's Call! 🏏 Ball lodges in the batter's pad. What happens? Comment A, B, C or D, answer tomorrow! 🦁",
+    "x": "Umpire's Call! 🏏 Ball lodges in the batter's pad. A) Catch still on B) Dead ball C) Four leg byes D) Keep running. Comment A-D, answer tomorrow! #OldLions #Roar",
+    "linkedin": "It's time for our Umpire's Call quiz at Old Lions Cricket Club. The ball lodges in the batter's pad. What happens? A) Fielders can still take a catch, B) Dead ball, C) Four leg byes, or D) Batters can keep running. Share your answer in the comments and join the conversation with fellow members of our cricket community. We'll reveal the answer tomorrow. #OldLionsCricket",
+    "gmb": "Umpire's Call quiz from Old Lions Cricket Club. The ball lodges in the batter's pad. What happens? A) Fielders can still take a catch, B) Dead ball, C) Four leg byes, or D) Batters can keep running. Comment A, B, C or D on our social channels. The answer will be shared tomorrow."
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "Umpire's Call time, Old Lions! 🏏 The ball lodges in the batter's pad. What happens? A) Fielders can still take a catch, B) Dead ball, C) Four leg byes, or D) Batters can keep running. Drop your answer in the comments, and we'll reveal the answer tomorrow. No peeking at the rulebook!",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-03-club-quiz-25a1a385b283/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-03T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Umpire's Call! 🏏 The ball lodges in the batter's pad. What happens?\n\nA) Fielders can still take a catch\nB) Dead ball\nC) Four leg byes\nD) Batters can keep running\n\nComment A, B, C or D below. Answer tomorrow! 🦁\n\n#OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-03-club-quiz-25a1a385b283/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-03T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-03-club-quiz-25a1a385b283/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-03T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    }
+  ]
+}
