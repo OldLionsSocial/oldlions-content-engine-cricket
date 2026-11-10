@@ -1,0 +1,80 @@
+{
+  "id": "2026-11-10-club-quiz-36b9fa0eff78",
+  "brand": "club",
+  "metricoolBrand": "Old Lions Cricket Club",
+  "sponsor": null,
+  "kind": "quiz",
+  "matchId": null,
+  "createdAt": "2026-11-10T04:39:19.893Z",
+  "captionSource": "claude",
+  "warnings": [],
+  "facts": [
+    "Club: Old Lions Cricket Club",
+    "Question: The ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens?",
+    "Option A: Dead ball, no runs",
+    "Option B: 5 penalty runs to the batting side",
+    "Option C: Batter can be caught off the rebound",
+    "Option D: Umpire awards a no ball",
+    "Task: ask followers to comment A, B, C or D; answer tomorrow. Do not reveal the answer."
+  ],
+  "captions": {
+    "facebook": "Umpire's Call time, Old Lions! 🏏 The ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens? A) Dead ball, no runs. B) 5 penalty runs to the batting side. C) Batter can be caught off the rebound. D) Umpire awards a no ball. Pop your answer in the comments, A, B, C or D, and we'll reveal it tomorrow. No peeking at the laws!",
+    "instagram": "Umpire's Call time, Lions! 🏏\n\nThe ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens?\n\nA) Dead ball, no runs\nB) 5 penalty runs to the batting side\nC) Batter can be caught off the rebound\nD) Umpire awards a no ball\n\nComment A, B, C or D below. Answer tomorrow! 🦁\n\n#OldLions #OldLionsCricket #Roar",
+    "tiktok": "Umpire's Call! 🏏 Ball hits a helmet on the ground behind the keeper. What happens? Comment A, B, C or D, answer tomorrow! #OldLions #Roar",
+    "x": "Umpire's Call 🏏 Ball hits a helmet lying behind the keeper. A) Dead ball B) 5 penalty runs C) Caught off the rebound D) No ball. Comment your answer! #OldLions",
+    "linkedin": "Time for a bit of fun with the Old Lions community. Today's Umpire's Call: the ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens? A) Dead ball, no runs. B) 5 penalty runs to the batting side. C) Batter can be caught off the rebound. D) Umpire awards a no ball. Share your answer in the comments with A, B, C or D. We'll reveal the answer tomorrow. #OldLions #OldLionsCricket",
+    "gmb": "Umpire's Call question from Old Lions Cricket Club: the ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens? A) Dead ball, no runs. B) 5 penalty runs to the batting side. C) Batter can be caught off the rebound. D) Umpire awards a no ball. Comment A, B, C or D on our social channels. The answer will be shared tomorrow."
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "Umpire's Call time, Old Lions! 🏏 The ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens? A) Dead ball, no runs. B) 5 penalty runs to the batting side. C) Batter can be caught off the rebound. D) Umpire awards a no ball. Pop your answer in the comments, A, B, C or D, and we'll reveal it tomorrow. No peeking at the laws!",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-10-club-quiz-36b9fa0eff78/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-10T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Umpire's Call time, Lions! 🏏\n\nThe ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens?\n\nA) Dead ball, no runs\nB) 5 penalty runs to the batting side\nC) Batter can be caught off the rebound\nD) Umpire awards a no ball\n\nComment A, B, C or D below. Answer tomorrow! 🦁\n\n#OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-10-club-quiz-36b9fa0eff78/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-10T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-10-club-quiz-36b9fa0eff78/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-10T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    }
+  ]
+}
