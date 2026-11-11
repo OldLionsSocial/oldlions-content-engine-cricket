@@ -1,0 +1,82 @@
+{
+  "id": "2026-11-11-club-quiz-answer-55dc5a2a432a",
+  "brand": "club",
+  "metricoolBrand": "Old Lions Cricket Club",
+  "sponsor": null,
+  "kind": "quiz-answer",
+  "matchId": null,
+  "createdAt": "2026-11-11T04:44:28.596Z",
+  "captionSource": "claude",
+  "warnings": [],
+  "facts": [
+    "Club: Old Lions Cricket Club",
+    "Question: The ball hits a fielder's helmet lying on the ground behind the wicketkeeper. What happens?",
+    "Option A: Dead ball, no runs",
+    "Option B: 5 penalty runs to the batting side",
+    "Option C: Batter can be caught off the rebound",
+    "Option D: Umpire awards a no ball",
+    "Correct answer: B",
+    "Explanation: 5 penalty runs are awarded to the batting side, as well as any runs already completed.",
+    "Reference: Law 28.3"
+  ],
+  "captions": {
+    "facebook": "Yesterday's Umpire's Call answer is in! 🏏 When the ball hits a fielder's helmet lying on the ground behind the wicketkeeper, the correct answer is B: 5 penalty runs to the batting side, on top of any runs already completed. That's Law 28.3, so well done if you got it right, and if you didn't, now you know for next Saturday! 🦁",
+    "instagram": "Umpire's Call: the answer is in! 🏏\n\nBall hits a fielder's helmet lying on the ground behind the keeper? It's B: 5 penalty runs to the batting side, plus any runs already completed. Law 28.3 for the rule nerds among us. 🦁\n\n#OldLions #OldLionsCricket #Roar",
+    "tiktok": "Umpire's Call answer: it's B! 🏏 Ball hits a helmet on the ground behind the keeper? 5 penalty runs to the batters, plus any runs already completed!",
+    "x": "Umpire's Call answer: B! Ball hits a helmet on the ground behind the keeper = 5 penalty runs to the batting side, plus runs already completed. Law 28.3 🏏 #OldLions #Roar",
+    "linkedin": "Yesterday's Umpire's Call question tested knowledge of the Laws of Cricket, and the correct answer is B. If the ball hits a fielder's helmet lying on the ground behind the wicketkeeper, 5 penalty runs are awarded to the batting side, as well as any runs already completed (Law 28.3). Understanding the Laws helps players, officials and supporters enjoy the game together, and we love seeing our club community get involved. #OldLions #OldLionsCricket",
+    "gmb": "Umpire's Call answer: if the ball hits a fielder's helmet lying on the ground behind the wicketkeeper, the batting side is awarded 5 penalty runs, as well as any runs already completed (Law 28.3). Old Lions Cricket Club."
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "Yesterday's Umpire's Call answer is in! 🏏 When the ball hits a fielder's helmet lying on the ground behind the wicketkeeper, the correct answer is B: 5 penalty runs to the batting side, on top of any runs already completed. That's Law 28.3, so well done if you got it right, and if you didn't, now you know for next Saturday! 🦁",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-11-club-quiz-answer-55dc5a2a432a/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-11T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Umpire's Call: the answer is in! 🏏\n\nBall hits a fielder's helmet lying on the ground behind the keeper? It's B: 5 penalty runs to the batting side, plus any runs already completed. Law 28.3 for the rule nerds among us. 🦁\n\n#OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-11-club-quiz-answer-55dc5a2a432a/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-11T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-11-club-quiz-answer-55dc5a2a432a/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-11T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    }
+  ]
+}
