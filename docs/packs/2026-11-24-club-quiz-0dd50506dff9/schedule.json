@@ -1,0 +1,83 @@
+{
+  "id": "2026-11-24-club-quiz-0dd50506dff9",
+  "brand": "club",
+  "metricoolBrand": "Old Lions Cricket Club",
+  "sponsor": null,
+  "kind": "quiz",
+  "matchId": null,
+  "createdAt": "2026-11-24T04:53:33.347Z",
+  "captionSource": "template",
+  "warnings": [
+    "Claude attempt 1 failed: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChM9wuKJSkNqZs16CGo5G\"}",
+    "Claude attempt 2 failed: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChM9wvGbYZudgxN9VvhFx\"}"
+  ],
+  "facts": [
+    "Club: Old Lions Cricket Club",
+    "Question: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal?",
+    "Option A: No, it's not allowed",
+    "Option B: Only with a warning first",
+    "Option C: Yes, it's a run out",
+    "Option D: Only in the last over",
+    "Task: ask followers to comment A, B, C or D; answer tomorrow. Do not reveal the answer."
+  ],
+  "captions": {
+    "facebook": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+    "instagram": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+    "tiktok": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+    "x": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+    "linkedin": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+    "gmb": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer!"
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-24-club-quiz-0dd50506dff9/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-24T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Umpire's Call: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal? A: No, it's not allowed / B: Only with a warning first / C: Yes, it's a run out / D: Only in the last over. Comment your answer! #OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-24-club-quiz-0dd50506dff9/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-24T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-24-club-quiz-0dd50506dff9/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-24T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    }
+  ]
+}
