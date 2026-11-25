@@ -1,0 +1,85 @@
+{
+  "id": "2026-11-25-club-quiz-answer-7e7c266ee7ba",
+  "brand": "club",
+  "metricoolBrand": "Old Lions Cricket Club",
+  "sponsor": null,
+  "kind": "quiz-answer",
+  "matchId": null,
+  "createdAt": "2026-11-25T04:55:39.339Z",
+  "captionSource": "template",
+  "warnings": [
+    "Claude attempt 1 failed: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChP3v7rsAA5uKRFvP2caE\"}",
+    "Claude attempt 2 failed: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChP3v8FRREDJTNj4KiRK9\"}"
+  ],
+  "facts": [
+    "Club: Old Lions Cricket Club",
+    "Question: The bowler runs out the non-striker, who left their crease before the ball was released. Is it legal?",
+    "Option A: No, it's not allowed",
+    "Option B: Only with a warning first",
+    "Option C: Yes, it's a run out",
+    "Option D: Only in the last over",
+    "Correct answer: C",
+    "Explanation: Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball.",
+    "Reference: Law 38.3"
+  ],
+  "captions": {
+    "facebook": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+    "instagram": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+    "tiktok": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+    "x": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+    "linkedin": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+    "gmb": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball."
+  },
+  "files": {
+    "feed": [
+      "feed.png"
+    ],
+    "story": [
+      "story.png"
+    ]
+  },
+  "posts": [
+    {
+      "network": "facebook",
+      "text": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-25-club-quiz-answer-7e7c266ee7ba/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-25T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "facebookData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "Umpire's Call answer: C. Since 2022 this is covered under the run out Law. The non-striker is out if they leave their ground before the bowler would normally have released the ball. #OldLions #OldLionsCricket #Roar",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-25-club-quiz-answer-7e7c266ee7ba/feed.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-25T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "POST"
+      }
+    },
+    {
+      "network": "instagram",
+      "text": "",
+      "media": [
+        "https://oldlionssocial.github.io/oldlions-content-engine-cricket/packs/2026-11-25-club-quiz-answer-7e7c266ee7ba/story.png"
+      ],
+      "publicationDate": {
+        "dateTime": "2026-11-25T12:00:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "instagramData": {
+        "type": "STORY"
+      }
+    }
+  ]
+}
